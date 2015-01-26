@@ -32,6 +32,24 @@
 - (NSArray *)getTripHistory {
     // TODO: Get real trips here
     
+    // Retrieve local JSON file called example.json
+    
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"history" ofType:@"json"];
+    
+    // Load the file into an NSData object called JSONData
+    
+    NSError *error = nil;
+    
+    NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:&error];
+    
+    // Create an Objective-C object from JSON Data
+    
+    id JSONObject = [NSJSONSerialization
+                     JSONObjectWithData:JSONData
+                     options:NSJSONReadingAllowFragments
+                     error:&error];
+    
+    /*
     NSArray *jsonTrips = @[
                            @{
                                @"uuid": @"7354db54-cc9b-4961-81f2-0094b8e2d215",
@@ -51,11 +69,12 @@
                                        @"latitude": @(37.7758179),
                                        @"longitude": @(-122.4180285)
                                        }
-                               }
+                               },
                            ];
+    */
     
     
-    for (NSDictionary *json in jsonTrips) {
+    for (NSDictionary *json in JSONObject) {
         [self.trips addObject:[[Trip alloc] initWithJSON:json]];
     }
     return [NSArray arrayWithArray:self.trips];

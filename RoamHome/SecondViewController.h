@@ -10,6 +10,7 @@
 
 @interface SecondViewController : UIViewController
 
+@property (strong, nonatomic) NSArray *trips;
 @property (strong, nonatomic) IBOutlet UILabel *homeAddressLabel;
 
 @end

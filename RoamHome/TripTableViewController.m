@@ -29,10 +29,6 @@
     return self;
 }
 
-- (void)awakeFromNib {
-    
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
