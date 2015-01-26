@@ -10,6 +10,6 @@
 
 @interface TripTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSMutableArray *trips;
+@property (strong, nonatomic) NSArray *trips;
 
 @end

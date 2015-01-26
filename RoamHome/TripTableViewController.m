@@ -8,8 +8,11 @@
 
 #import "TripTableViewController.h"
 #import "Trip.h"
+#import "UberAPIManager.h"
 
 @interface TripTableViewController ()
+
+@property (strong, nonatomic) UberAPIManager *apiManager;
 
 @end
 
@@ -18,33 +21,10 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        self.trips = [[NSMutableArray alloc] init];
-        NSArray *jsonTrips = @[
-                               @{
-                                   @"uuid": @"7354db54-cc9b-4961-81f2-0094b8e2d215",
-                                   @"request_time": @1401884467,
-                                   @"product_id": @"edf5e5eb-6ae6-44af-bec6-5bdcf1e3ed2c",
-                                   @"status": @"completed",
-                                   @"distance": @0.0279562,
-                                   @"start_time": @1401884646,
-                                   @"start_location": @{
-                                           @"address": @"706 Mission St, San Francisco, CA",
-                                           @"latitude": @(37.7860099),
-                                           @"longitude": @(-122.4025387)
-                                           },
-                                   @"end_time": @1401884732,
-                                   @"end_location": @{
-                                           @"address": @"1455 Market Street, San Francisco, CA",
-                                           @"latitude": @(37.7758179),
-                                           @"longitude": @(-122.4180285)
-                                           }
-                                }
-                               ];
-        
-        
-        for (NSDictionary *json in jsonTrips) {
-            [self.trips addObject:[[Trip alloc] initWithJSON:json]];
-        }
+        self.apiManager = [[UberAPIManager alloc] initWithClientID:kUberClientID
+                                                       serverToken:kUberServerToken
+                                                            secret:kUberSecret];
+        self.trips = [self.apiManager getTripHistory];
     }
     return self;
 }

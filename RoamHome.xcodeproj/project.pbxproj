@@ -17,6 +17,7 @@
 		63A69EE41A75C80700DBCBB9 /* TripTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EE31A75C80700DBCBB9 /* TripTableViewController.m */; };
 		63A69EE71A75C88700DBCBB9 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EE61A75C88700DBCBB9 /* Trip.m */; };
 		63A69EE91A75C94500DBCBB9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A69EE81A75C94500DBCBB9 /* CoreLocation.framework */; };
+		63A69EEC1A75D1F000DBCBB9 /* UberAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EEB1A75D1F000DBCBB9 /* UberAPIManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		63A69EE51A75C88700DBCBB9 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
 		63A69EE61A75C88700DBCBB9 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
 		63A69EE81A75C94500DBCBB9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		63A69EEA1A75D1F000DBCBB9 /* UberAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UberAPIManager.h; sourceTree = "<group>"; };
+		63A69EEB1A75D1F000DBCBB9 /* UberAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UberAPIManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 				63A69EE31A75C80700DBCBB9 /* TripTableViewController.m */,
 				63A69EE51A75C88700DBCBB9 /* Trip.h */,
 				63A69EE61A75C88700DBCBB9 /* Trip.m */,
+				63A69EEA1A75D1F000DBCBB9 /* UberAPIManager.h */,
+				63A69EEB1A75D1F000DBCBB9 /* UberAPIManager.m */,
 			);
 			path = RoamHome;
 			sourceTree = "<group>";
@@ -233,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A69EEC1A75D1F000DBCBB9 /* UberAPIManager.m in Sources */,
 				63A69EC51A75C60C00DBCBB9 /* SecondViewController.m in Sources */,
 				63A69EBF1A75C60C00DBCBB9 /* AppDelegate.m in Sources */,
 				63A69EE71A75C88700DBCBB9 /* Trip.m in Sources */,
