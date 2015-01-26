@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		63A69EBC1A75C60C00DBCBB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EBB1A75C60C00DBCBB9 /* main.m */; };
 		63A69EBF1A75C60C00DBCBB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EBE1A75C60C00DBCBB9 /* AppDelegate.m */; };
-		63A69EC21A75C60C00DBCBB9 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EC11A75C60C00DBCBB9 /* FirstViewController.m */; };
 		63A69EC51A75C60C00DBCBB9 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EC41A75C60C00DBCBB9 /* SecondViewController.m */; };
 		63A69EC81A75C60C00DBCBB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A69EC61A75C60C00DBCBB9 /* Main.storyboard */; };
 		63A69ECA1A75C60C00DBCBB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63A69EC91A75C60C00DBCBB9 /* Images.xcassets */; };
 		63A69ECD1A75C60C00DBCBB9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63A69ECB1A75C60C00DBCBB9 /* LaunchScreen.xib */; };
 		63A69ED91A75C60C00DBCBB9 /* RoamHomeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69ED81A75C60C00DBCBB9 /* RoamHomeTests.m */; };
+		63A69EE41A75C80700DBCBB9 /* TripTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EE31A75C80700DBCBB9 /* TripTableViewController.m */; };
+		63A69EE71A75C88700DBCBB9 /* Trip.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A69EE61A75C88700DBCBB9 /* Trip.m */; };
+		63A69EE91A75C94500DBCBB9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A69EE81A75C94500DBCBB9 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +35,6 @@
 		63A69EBB1A75C60C00DBCBB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63A69EBD1A75C60C00DBCBB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63A69EBE1A75C60C00DBCBB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63A69EC01A75C60C00DBCBB9 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		63A69EC11A75C60C00DBCBB9 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		63A69EC31A75C60C00DBCBB9 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		63A69EC41A75C60C00DBCBB9 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		63A69EC71A75C60C00DBCBB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +43,11 @@
 		63A69ED21A75C60C00DBCBB9 /* RoamHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoamHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A69ED71A75C60C00DBCBB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63A69ED81A75C60C00DBCBB9 /* RoamHomeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoamHomeTests.m; sourceTree = "<group>"; };
+		63A69EE21A75C80700DBCBB9 /* TripTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripTableViewController.h; sourceTree = "<group>"; };
+		63A69EE31A75C80700DBCBB9 /* TripTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TripTableViewController.m; sourceTree = "<group>"; };
+		63A69EE51A75C88700DBCBB9 /* Trip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trip.h; sourceTree = "<group>"; };
+		63A69EE61A75C88700DBCBB9 /* Trip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trip.m; sourceTree = "<group>"; };
+		63A69EE81A75C94500DBCBB9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63A69EE91A75C94500DBCBB9 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +72,7 @@
 		63A69EAD1A75C60C00DBCBB9 = {
 			isa = PBXGroup;
 			children = (
+				63A69EE81A75C94500DBCBB9 /* CoreLocation.framework */,
 				63A69EB81A75C60C00DBCBB9 /* RoamHome */,
 				63A69ED51A75C60C00DBCBB9 /* RoamHomeTests */,
 				63A69EB71A75C60C00DBCBB9 /* Products */,
@@ -86,14 +93,16 @@
 			children = (
 				63A69EBD1A75C60C00DBCBB9 /* AppDelegate.h */,
 				63A69EBE1A75C60C00DBCBB9 /* AppDelegate.m */,
-				63A69EC01A75C60C00DBCBB9 /* FirstViewController.h */,
-				63A69EC11A75C60C00DBCBB9 /* FirstViewController.m */,
 				63A69EC31A75C60C00DBCBB9 /* SecondViewController.h */,
 				63A69EC41A75C60C00DBCBB9 /* SecondViewController.m */,
 				63A69EC61A75C60C00DBCBB9 /* Main.storyboard */,
 				63A69EC91A75C60C00DBCBB9 /* Images.xcassets */,
 				63A69ECB1A75C60C00DBCBB9 /* LaunchScreen.xib */,
 				63A69EB91A75C60C00DBCBB9 /* Supporting Files */,
+				63A69EE21A75C80700DBCBB9 /* TripTableViewController.h */,
+				63A69EE31A75C80700DBCBB9 /* TripTableViewController.m */,
+				63A69EE51A75C88700DBCBB9 /* Trip.h */,
+				63A69EE61A75C88700DBCBB9 /* Trip.m */,
 			);
 			path = RoamHome;
 			sourceTree = "<group>";
@@ -226,7 +235,8 @@
 			files = (
 				63A69EC51A75C60C00DBCBB9 /* SecondViewController.m in Sources */,
 				63A69EBF1A75C60C00DBCBB9 /* AppDelegate.m in Sources */,
-				63A69EC21A75C60C00DBCBB9 /* FirstViewController.m in Sources */,
+				63A69EE71A75C88700DBCBB9 /* Trip.m in Sources */,
+				63A69EE41A75C80700DBCBB9 /* TripTableViewController.m in Sources */,
 				63A69EBC1A75C60C00DBCBB9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

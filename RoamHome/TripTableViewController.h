@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  TripTableViewController.h
 //  RoamHome
 //
 //  Created by David Mazza on 1/25/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface TripTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray *trips;
 
 @end
-
