@@ -58,6 +58,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goHome:(id)sender {
+    CLLocation *home = [self findNearestLocationToCentroid:[self findCentroidInLocations:[self potentialHomeLocations]]];
+    NSURL *uberURL = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=%@&action=setPickup&pickup=my_location&dropoff[latitude]=%f&dropoff[longitude]=%f&dropoff[nickname]=Home", kUberClientID, home.coordinate.latitude, home.coordinate.longitude]];
+//     NSURL *uberURL = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=%@&action=setPickup&pickup=my_location&dropoff[latitude]=%f&dropoff[longitude]=%f&dropoff[nickname]=Home", kUberClientID, home.coordinate.latitude, home.coordinate.longitude]];
+//    NSURLRequest *uberRequest = [[NSURLRequest alloc] initWithURL:];
+    
+    [[UIApplication sharedApplication] openURL:uberURL];
+}
+
 - (NSArray *)potentialHomeLocations {
     NSMutableArray *homeLocations = [[NSMutableArray alloc] init];
     
