@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) NSArray *trips;
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UIButton *uberButton;
 
 @end
 

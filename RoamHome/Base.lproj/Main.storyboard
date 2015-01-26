@@ -60,20 +60,23 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pM9-T8-i6C">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="oXw-gM-k6v"/>
+                                </connections>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-cX-bVF">
-                                <rect key="frame" x="16" y="270" width="568" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZ3-cX-bVF">
+                                <rect key="frame" x="16" y="269" width="568" height="62"/>
                                 <color key="backgroundColor" red="0.10453196945558108" green="0.66449412983425415" blue="0.26847124044920151" alpha="0.73999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cHb-mJ-ZaC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <state key="normal" title="Go Home">
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="36"/>
+                                <state key="normal" title="GO HOME">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="goHome:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="0VI-SU-v4K"/>
+                                    <action selector="uberButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="FzU-hm-nw1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,6 +100,7 @@
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="mapView" destination="pM9-T8-i6C" id="j7Y-so-dJa"/>
+                        <outlet property="uberButton" destination="pZ3-cX-bVF" id="zeQ-Un-yUL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>

@@ -10,7 +10,7 @@
 #import "Trip.h"
 #import "UberAPIManager.h"
 
-@interface SecondViewController ()
+@interface SecondViewController ()<MKMapViewDelegate>
 
 @property (strong, nonatomic) UberAPIManager *apiManager;
 
@@ -57,13 +57,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)uberButtonPressed:(UIButton *)sender {
+    if ([sender.titleLabel.text containsString:@"HOME"]) {
+        [self go:@"Home"];
+    } else if ([sender.titleLabel.text containsString:@"WORK"]) {
+        [self go:@"Work"];
+    }
+}
 
-- (IBAction)goHome:(id)sender {
-    CLLocation *home = [self findNearestLocationToCentroid:[self findCentroidInLocations:[self potentialHomeLocations]]];
-    NSURL *uberURL = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=%@&action=setPickup&pickup=my_location&dropoff[latitude]=%f&dropoff[longitude]=%f&dropoff[nickname]=Home", kUberClientID, home.coordinate.latitude, home.coordinate.longitude]];
-//     NSURL *uberURL = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=%@&action=setPickup&pickup=my_location&dropoff[latitude]=%f&dropoff[longitude]=%f&dropoff[nickname]=Home", kUberClientID, home.coordinate.latitude, home.coordinate.longitude]];
-//    NSURLRequest *uberRequest = [[NSURLRequest alloc] initWithURL:];
+- (void)go:(NSString *)place {
+    CLLocation *destination;
+    if ([place isEqualToString:@"Home"]) {
+        destination = [self findNearestLocationToCentroid:[self findCentroidInLocations:[self potentialHomeLocations]]];
+    } else if ([place isEqualToString:@"Work"]) {
+        destination = [self findNearestLocationToCentroid:[self findCentroidInLocations:[self potentialWorkLocations]]];
+    }
     
+    NSURL *uberURL = [NSURL URLWithString:[NSString stringWithFormat:@"uber://?client_id=%@&action=setPickup&pickup=my_location&dropoff[latitude]=%f&dropoff[longitude]=%f&dropoff[nickname]=Home", kUberClientID, destination.coordinate.latitude, destination.coordinate.longitude]];
+
     [[UIApplication sharedApplication] openURL:uberURL];
 }
 
@@ -144,6 +155,30 @@
     }
     
     return nearestLocation;
+}
+
+#pragma mark - MKMapView Delegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"annotationIdentifier"];
+    
+    if ([annotation.title isEqualToString:@"Home"]) {
+        [pin setPinColor:MKPinAnnotationColorGreen];
+    } else {
+        [pin setPinColor:MKPinAnnotationColorPurple];
+    }
+    
+    return pin;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    if ([view.annotation.title isEqualToString:@"Home"]) {
+        [self.uberButton setTitle:@"GO HOME" forState:UIControlStateNormal];
+        [self.uberButton setBackgroundColor:[UIColor colorWithHue:0.3833 saturation:0.84 brightness:0.66 alpha:0.74]];
+    } else {
+        [self.uberButton setTitle:@"GO WORK" forState:UIControlStateNormal];
+        [self.uberButton setBackgroundColor:[UIColor colorWithHue:0.7611 saturation:0.84 brightness:0.66 alpha:0.74]];
+    }
 }
 
 @end
