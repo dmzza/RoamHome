@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98839C3C-040C-4D1D-983D-07123B4E7A16</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RoamHome</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF24D895403ED45CDD9D06C0893FAD5A4677B954</key>
+		<string>https://github.com/dmzza/RoamHome.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RoamHome.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF24D895403ED45CDD9D06C0893FAD5A4677B954</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dmzza/RoamHome.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF24D895403ED45CDD9D06C0893FAD5A4677B954</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF24D895403ED45CDD9D06C0893FAD5A4677B954</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RoamHome</string>
+		</dict>
+	</array>
+</dict>
+</plist>
